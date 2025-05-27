@@ -4,16 +4,17 @@ import './index.css'
 import App from './App.jsx'
 import Navbar from './components/navbar.jsx'
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import JobApplicationForm from './components/JobApplicationForm.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div> <h1>home page</h1> <Link to='/contact'> contact </Link> </div>,
+    element:<App/>,
     
   },
   {
-    path: "/login",
-    element: <div> <h1>lonin page</h1> <Link to='/contact'> contact </Link> </div>,
+    path: "/job",
+    element: <JobApplicationForm/>,
     
   },
   {
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    
     <RouterProvider router={router}>
       <App />
       <Navbar/>
