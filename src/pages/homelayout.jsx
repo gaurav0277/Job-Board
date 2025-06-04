@@ -1,11 +1,10 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
 
-function Homelayout() {
+export default function HomeLayout() {
   return (
     <div>
-        <h1>homelayout</h1>
+        <Outlet />
     </div>
   )
 }
-
-export default Homelayout
